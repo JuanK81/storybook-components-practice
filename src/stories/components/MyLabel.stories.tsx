@@ -9,6 +9,7 @@ export default {
     size: { control: 'select' },
     color: { control: 'select' },
     fontColor: { control: 'color' },
+    backgroundColor: { control: 'color' },
   },
 } as ComponentMeta<typeof MyLabel>;
 
@@ -21,11 +22,6 @@ Basic.args = {
   size: 'normal',
   allCaps: false,
 };
-export const AllCaps = Template.bind({});
-AllCaps.args = {
-  size: 'normal',
-  allCaps: true,
-};
 export const Secondary = Template.bind({});
 Secondary.args = {
   size: 'normal',
@@ -33,11 +29,22 @@ Secondary.args = {
 };
 export const Tertiary = Template.bind({});
 Tertiary.args = {
-  size: 'normal',
+  size: 'h1',
   color: 'tertiary',
 };
+export const AllCaps = Template.bind({});
+AllCaps.args = {
+  size: 'normal',
+  allCaps: true,
+};
 export const CustomFontColor = Template.bind({});
-Tertiary.args = {
+CustomFontColor.args = {
   size: 'h1',
   fontColor: '',
+};
+export const CustomBackgroundColor = Template.bind({});
+CustomBackgroundColor.args = {
+  size: 'h1',
+  fontColor: '#fff',
+  backgroundColor: '#000',
 };
